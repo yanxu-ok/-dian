@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="./node_modules/vue/dist/vue.js"></script>
+
+<body>
+    <div id="app">
+        {{aaa}}
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                aaa: 3
+            },
+            methods: {
+                add() {
+                    console.log(this.aaa)
+                }
+            },
+            beforeCreate() {
+                //data methods 数据没有初始化
+            },
+            created() {
+                //data methods 数据已经初始化
+            },
+            beforeMount() {
+                //开始编译模板
+            },
+            mounted() {
+                //模板已经编译好
+            },
+            beforeUpdate() {
+                //数据变动触发，数据还是旧值
+            },
+            updated() {
+                //数据变动触发，数据是新值
+            },
+            beforeDestroy() {
+                //销毁之前还能用
+            },
+            destroyed() {
+                //销毁之后所有都不能用
+            },
+        })
+    </script>
+</body>
+
+</html>
